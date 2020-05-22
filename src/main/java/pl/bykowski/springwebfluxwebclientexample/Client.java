@@ -15,7 +15,7 @@ public class Client {
     Logger logger = LoggerFactory.getLogger(Client.class);
 
     @EventListener(ApplicationReadyEvent.class)
-    public Flux<Student> getTweetsNonBlocking() {
+    public Flux<Student> getStudents() {
         Flux<Student> studentFlux = WebClient.create()
                 .get()
                 .uri("http://localhost:8080")
